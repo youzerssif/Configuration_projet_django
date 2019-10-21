@@ -122,30 +122,40 @@ Puis dans ce dossier <<projet_tuto>> creer le projet et l application avec ses c
 
 
 ## how to do search field in django
-        ```python
-                from django.shortcuts import render
-                from django.db.models import Q
-                from posts.models import Post
+```python
+            from django.shortcuts import render
+            from django.db.models import Q
+            from posts.models import Post
 
-                def searchposts(request):
-                    if request.method == 'GET':
-                        query= request.GET.get('q')
+            def searchposts(request):
+                if request.method == 'GET':
+                    query= request.GET.get('q')
 
-                        submitbutton= request.GET.get('submit')
+                    submitbutton= request.GET.get('submit')
 
-                        if query is not None:
-                            lookups= Q(title__icontains=query) | Q(content__icontains=query)
+                    if query is not None:
+                        lookups= Q(title__icontains=query) | Q(content__icontains=query)
 
-                            results= Post.objects.filter(lookups).distinct()
+                        results= Post.objects.filter(lookups).distinct()
 
-                            context={'results': results,
-                                     'submitbutton': submitbutton}
+                        context={'results': results,
+                                 'submitbutton': submitbutton}
 
-                            return render(request, 'search/search.html', context)
-
-                        else:
-                            return render(request, 'search/search.html')
+                        return render(request, 'search/search.html', context)
 
                     else:
                         return render(request, 'search/search.html')
-          ```
+
+                else:
+                    return render(request, 'search/search.html')
+```
+# liens utiles
+## learn VueJS
+https://wwww.techiediaries.com/vue-axios-tutorial/
+blog.vuejoy.com/4-axios/
+https://vuejsdeveloppers.com/2017/03/24/vue-js-component-templates/
+https://wwww.vuemastery.com/courses/intro-vue-js/components/
+https://wwww.google.com/amp/s/serversideup.net/uploading-files-vuejs-axios/amp
+https://lostinbritattany.github.io/vue-beer/step-09/
+https://medium.com/@thibault60000/vue-js-pour-les-d%C3%A9butants-37a83aaea9c4
+https://morioh.com/p/b8679ac09d52
