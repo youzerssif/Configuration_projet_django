@@ -154,9 +154,15 @@ Puis dans ce dossier <<projet_tuto>> creer le projet et l application avec ses c
 https://wwww.techiediaries.com/vue-axios-tutorial/
 
 https://blog.vuejoy.com/4-axios/
+
 https://vuejsdeveloppers.com/2017/03/24/vue-js-component-templates/
+
 https://wwww.vuemastery.com/courses/intro-vue-js/components/
+
 https://wwww.google.com/amp/s/serversideup.net/uploading-files-vuejs-axios/amp
+
 https://lostinbritattany.github.io/vue-beer/step-09/
+
 https://medium.com/@thibault60000/vue-js-pour-les-d%C3%A9butants-37a83aaea9c4
+
 https://morioh.com/p/b8679ac09d52
