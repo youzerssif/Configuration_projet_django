@@ -166,3 +166,17 @@ https://lostinbritattany.github.io/vue-beer/step-09/
 https://medium.com/@thibault60000/vue-js-pour-les-d%C3%A9butants-37a83aaea9c4
 
 https://morioh.com/p/b8679ac09d52
+
+## GraphQL et DRF
+
+https://www.howtographql.com/graphql-python/0-introduction/
+
+https://docs.graphene-python.org/projects/django/en/latest/
+
+https://www.django-rest-framework.org/community/tutorials-and-resources/
+
+https://www.django-rest-framework.org/tutorial/quickstart/
+
+https://www.django-rest-framework.org/
+
+
