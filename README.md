@@ -180,8 +180,8 @@ https://www.django-rest-framework.org/tutorial/quickstart/
 https://www.django-rest-framework.org/
 
 ## lien Modeles et queryset
-```
+
     https://djangobook.com/mdj2-models/
 
     https://djangobook.com/mdj2-advanced-models/
-```
+
