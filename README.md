@@ -32,6 +32,14 @@ Puis dans ce dossier <<projet_tuto>> creer le projet et l application avec ses c
     Dans INSTALLED_APPS mettez le nom de votre application
 
 ```python
+import os
+from pathlib import Path
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
     INSTALLED_APPS = [
     'myapp.apps.MyappConfig',
 
@@ -44,7 +52,7 @@ Puis dans ce dossier <<projet_tuto>> creer le projet et l application avec ses c
     TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -62,12 +70,11 @@ Puis dans ce dossier <<projet_tuto>> creer le projet et l application avec ses c
 
 ```python
     STATIC_URL = '/static/'
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static')
-    ]
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     MEDIA_URL = '/media/'
-    MEDIA_ROOT = os.path.join(BASE_DIR, '../media_cdn')
-    STATIC_ROOT = os.path.join(BASE_DIR, '../static_cdn')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 ```
 
 ## Dans le dossier myproject et dans le fichier urls.py completer avec ce code:
